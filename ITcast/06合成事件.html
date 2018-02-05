@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html">
+    <title>06合成事件</title>
+    <script src="../jQuery/jquery-1.7.1.min.js"></script>
+    <script>
+        //jquery代码是对javascript的封装，所以引用jquery以后可以混写入javascript代码
+        $(function(){
+            //第一个事件为指向，第二个事件为移开
+            $('#btnShow0').hover(function(){//指向
+                this.style.color = 'red';
+            },function(){
+                this.style.color = 'black';
+            });
+            //多次点击顺序循环执行
+            $('#btnShow1').toggle(function(){
+                //第m%n==1次点击时执行此函数
+                alert("第一次点击执行此函数");
+            },function(){
+                //第m%n==2次点击时执行此函数
+                alert("第二次点击执行此函数");
+            },function(){
+                //第m%n==0次点击时执行此函数
+                alert("第三次点击执行此函数");
+            });
+            //绑定的事件仅执行一次
+            $('#btnShow2').one('click',function(){
+                alert("仅执行一次就不再相应了");
+            });
+        });
+    </script>
+</head>
+<body>
+    <input type="button" id="btnShow0" value="指定/移开合成事件"/><br>
+    <input type="button" id="btnShow1" value="多次点击合成事件"/><br>
+    <input type="button" id="btnShow2" value="仅一次点击合成事件"/><br>
+</body>
+</html>

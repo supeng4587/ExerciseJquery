@@ -3,8 +3,19 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="Content-Type" content="text/html">
-    <title>Page Title</title>
+    <title>05点谁谁哭</title>
     <script src="../jQuery/jquery-1.7.1.min.js"></script>
+    <script>
+        $(function(){
+            //获取所有的按钮，得到jquery对象，为对象的注册点击事件
+            //隐式迭代：自动将数组当中的每个元素都执行一遍操作
+            //当前：会将数组中的每个input进行click事件的绑定
+            $('input').click(function(){
+                //this表示触发当前事件的DOM对象
+                this.value='呜呜';
+            });
+        });
+    </script>
 </head>
 <body>
     <input type="button" value="哈哈"><br>

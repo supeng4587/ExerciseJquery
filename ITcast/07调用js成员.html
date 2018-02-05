@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="content-Type" content="text/html">
+    <title>调用js成员</title>
+    <script src="../jQuery/jquery-1.7.1.min.js"></script>
+    <script>
+        $(function(){
+            $('#btnShow').click(function(){
+                //找到文本并获取值
+                var num = parseInt($('#txtNum').val());
+                //直接调用js的成员进行操作
+                num++;
+                //将值显示到文本框
+                $('#txtNum').val(num);
+                //传递参数时，表示将值赋给value
+            });
+        });
+    </script>
+</head>
+<body>
+    <input type="text" id="txtNum"/>
+    <input type="button" id="btnShow" value="显示"/>
+</body>
+</html>
