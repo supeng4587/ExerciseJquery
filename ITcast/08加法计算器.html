@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>08加法计算器</title>
+    <script src="../jQuery/jquery-1.7.1.min.js"></script>
+    <script>
+        $(function(){
+            //为按钮绑定点击事件
+            $('#btnAdd').click(function(){
+                //获取文本框中的值，并转换成整数
+                var number1 = parseInt($('#txtNum1').val());
+                var number2 = parseInt($('#txtNum2').val());
+                //运算
+                var result = number1+number2;
+                $('#txtResult').val(result);
+            });
+        });
+    </script>
+</head>
+<body>
+    <input type="text" id="txtNum1"/>+
+    <input type="text" id="txtNum2"/>
+    <input type="button" id="btnAdd" value="="/>
+    <input type="text" id="txtResult"/>
+</body>
+</html>

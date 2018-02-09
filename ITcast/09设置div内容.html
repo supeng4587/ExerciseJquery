@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="txt/html">
+    <title>09设置div内容</title>
+    <script src="../jQuery/jquery-1.7.1.min.js"></script>
+    <script>
+        $(function(){
+            $('#btnShow').click(function(){
+                //对于标签对，使用text()、html()进行设置或获取
+                $('#txt1').text('这是一个div');
+            });
+        });
+    </script>
+</head>
+<body>
+    <input type="button" id="btnShow" value="show"/>
+    <div id="txt1"></div>
+</body>
+</html>
