@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html">
+    <title>都是P</title>
+    <script src="../jQuery/jquery-1.7.1.js"></script>
+    <script>
+        $(function(){
+            //将jquery对象转换成DOM对象：通过[下标]的形式返回DOM对象
+            $('#btnShow').click(function(){
+                //拾取器加#是id，不加是标签
+                $('p').text('都是P');//隐式迭代
+            //将DOM对象转换成jquery对象：$(DOM对象)
+                $(this).val('abc')
+                //$('p')[3]:获取下标是3的DOM对象
+                //$($('p')[3]):转换成jquery对象，使用text赋值
+                $($('p')[3]).text('我不是屁');
+            });
+        });
+    </script>
+</head>
+<body>
+    <input type="button" id="btnShow" value="都是P"/>
+    <p>p1</p>
+    <p>p2</p>
+    <p>p3</p>
+    <p>p4</p>
+    <p>p5</p>
+    <p>p6</p>
+    <p>p7</p>
+</body>
+</html>
