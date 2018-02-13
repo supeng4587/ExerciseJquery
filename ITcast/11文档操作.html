@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html">
+    <title>文档操作</title>
+    <script src="../jQuery/jquery-1.7.1.js"></script>
+    <script>
+        $(function(){
+            $('#btnAppend').click(function(){
+                //动态创建jquery对象
+                var append = $('<b>hello</b>');
+                //追加
+                $('#divContainer').append(append);
+            });
+
+            $('#btnAppendTo').click(function(){
+                $('<b>appendTo</b>').appendTo($('#divContainer'));
+            });
+
+            $('#btnPerpend').click(function(){
+                $('#divContainer').prepend('<b>prepend</b>');
+            });
+
+            $('#btnPerpendTo').click(function(){
+                $('<b>perpendto</b>').prependTo('#divContainer');
+            });
+
+            $('#btnAfter').click(function(){
+                $('#divContainer').after('<b>我和div平级，但是排在后面</b>');
+            });
+
+            $('#btnAfterTo').click(function(){
+                $('<b>我和div平级，但是排在后面</b>').insertAfter('#divContainer');
+            });
+
+            $('#btnBefore').click(function(){
+                $('#divContainer').before('<b>我和div平级，但是在div前面</b>');
+            });
+
+            $('#btnBeforeTo').click(function(){
+                $('<b>我是insertBefore和div平级，但是在div前面</b>').insertBefore('#divContainer');
+            });
+
+            $('#btnEmpty').click(function(){
+                $('#divContainer').empty();
+            });
+
+            $('#btnRemove').click(function(){
+                $('#divContainer').remove();
+            });
+        });
+    </script>
+</head>
+<body>
+    <input type="button" id="btnAppend" value="Append"/>
+    <input type="button" id="btnAppendTo" value="AppendTo"/>
+    <input type="button" id="btnPerpend" value="Perpend"/>
+    <input type="button" id="btnPerpendTo" value="PerpendTo"/>
+    <input type="button" id="btnAfter" value="After"/>
+    <input type="button" id="btnAfterTo" value="AfterTo"/>
+    <input type="button" id="btnBefore" value="Before"/>
+    <input type="button" id="btnBeforeTo" value="BeforeTo"/>
+    <input type="button" id="btnEmpty" value="Empty"/>
+    <input type="button" id="btnRemove" value="Remove"/><br>
+    <hr>
+    <div id="divContainer">asdf</div>
+</body>
+</html>
