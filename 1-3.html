@@ -5,6 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>js控制DOM对象</title>
     <script src="Jscript/jquery-3.3.1.min.js"></script>
+    <style type="text/css">
+    .divFrame{width: 260px;border: solid 1px #666; font-size: 10pt}
+    .divTitle{background-color: #eee;padding: 5px}
+    .divContent{padding: 8px;font-size: 9pt}
+    .divTip{width: 244px;border: solid 1px #666;padding: 8px;font-size: 9pt;margin-top: 5px;display: none}
+    .txtCss{border: solid 1px #ccc}
+    .divBtn{padding-top: 5px}
+    .divBtn .btnCss{border: solid 1px #535353;width: 60px}
+    </style>
+    <script type="text/javascript">
+        window.onload=function(){
+            function btnClick(){
+                //获取文本框的值
+                var oTxtValue = document.getElementById("txtName").value;
+                //获取单选框的值
+                var oRdoValue = (getElementById("Radio1").checked)?"男":"女";
+
+            };
+        };
+    </script>
 </head>
 <body>
     <div class="divFrame">
