@@ -18,16 +18,17 @@
         $(function(){
             //创建省的select
             var select = $('<select id="selectProvince"></select>');
-            select.appendTo($('body'));
+            select.appendTo($('body'));//追加到body中
             //遍历集合
             $.each(datas,function(key,value){
+                //根据数据创建option并追加到select上
                 $('<option value = "'+key+'">'+key+'</option>').appendTo(select);
             });
 
             //创建市的select
             var selectCity = $('<select></select>').appendTo('body');
             //获取选中的省的信息
-            var pro = $('#selectProvice').val();
+            var pro = $('#selectProvince').val();
             //将省名称作为键到集合中获取值
             var citys =datas[pro]
             //遍历市的数组
