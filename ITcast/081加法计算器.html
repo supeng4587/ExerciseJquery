@@ -1,0 +1,25 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>081加法计算器</title>
+    <script src="../jQuery\jquery-1.7.1.min.js"></script>
+<script>
+    $(function(){
+        $('#btnAdd').click(function(){
+            var num1 = parseFloat($('#txtNum1').val());
+            var num2 = parseFloat($('#txtNum2').val());
+            var result = num1+num2;
+            $('#txtResult').val(result);
+        });
+    });
+</script>
+</head>
+<body>
+    <input type="text" id="txtNum1" value=""/>+
+    <input type="text" id="txtNum2" value=""/>
+    <input type="button" id="btnAdd" value="="/>
+    <input type="text" id="txtResult" value=""/>
+</body>
+</html>
