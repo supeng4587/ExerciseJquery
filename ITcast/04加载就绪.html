@@ -14,12 +14,16 @@
 
         //表示页面标签加载完成后执行代码，例如页面上有大图片的时候，只要加载完标签就开始执行。这样执行效率更高。在实践中优先使用$(function(){});
         //DOM就绪，指标签加载完成，这时标签指定的资源可能还没有加载完成
-        //$(document).ready(fun);可以简写为
+        //标准写法$(document).ready(function(){});
+        //可以简写为
         $(function(){
             $('#btnShow').click(function(){
                 alert("显示绑定");
             });
         });
+        //加载完成的区别：
+        //window.onload是页面加载完成后执行（包括所有的图片等文件）
+        //$(document).ready(function(){})是页面标签加载完成，相对效率更高
     </script>
 </head>
 <body>
